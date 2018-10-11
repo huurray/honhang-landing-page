@@ -1,15 +1,15 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import theme from './themes';
-import baseStyles from './base';
+import { defaultTheme } from './themes';
+import { baseStyles } from './base';
 
-export default Component => {
+export default WarrapedComponent => {
   return class extends React.Component {
     render() {
       baseStyles();
       return (
-        <ThemeProvider theme={theme}>
-          <Component {...this.props} />
+        <ThemeProvider theme={defaultTheme}>
+          <WarrapedComponent {...this.props} />
         </ThemeProvider>
       );
     }
