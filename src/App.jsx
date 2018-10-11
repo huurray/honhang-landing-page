@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/NatoursHeader';
+
+
+
 // import Heading from './components/NatoursHeading';
-import About from './components/NatoursAbout';
-import Features from './components/NatoursFeatures';
-import Tours from './components/NatoursTours';
-import Stories from './components/NatoursStories';
-import Book from './components/NatoursBook';
-import Footer from './components/NatoursFooter';
-import Navigation from './components/NatoursNavigation';
-import Popup from './components/NatoursPopup';
+// import About from './components/NatoursAbout';
+// import Features from './components/NatoursFeatures';
+// import Tours from './components/NatoursTours';
+// import Stories from './components/NatoursStories';
+// import Book from './components/NatoursBook';
+// import Footer from './components/NatoursFooter';
+// import Navigation from './components/NatoursNavigation';
+// import Popup from './components/NatoursPopup';
 import { ButtonLink } from './styles/components';
 import withStyles from './styles';
+
+//sections
+import Section1 from '../src/components/Section1';
 
 const Container = styled.div``;
 
 const logo = require('./common/img/app-logo.png');
 const headerBackImg = require('./common/img/hero.jpg');
 const headerBackImgSmall = require('./common/img/hero-small.jpg');
+
+
 
 const Heading = {
   Container: styled.div`
@@ -125,6 +133,9 @@ class App extends Component {
             </Heading.ImageBox>
           </Heading.Container>
         </Header>
+
+        <Section1 />
+
       </Container>
     );
   }
