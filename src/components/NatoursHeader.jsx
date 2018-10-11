@@ -8,15 +8,16 @@ import { media } from '../styles/abstracts';
 
 const Header = styled.header`
   height: 750px;
-  ${props => props.theme.mixins.backgroundImageGradient} background-size: cover;
+  ${props => props.theme.mixins.backgroundImageGradient};
+  background-size: cover;
   background-position: top;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-  ${media.phone`
+  /* ${media.phone`
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  `} @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+  `} @media (min-resolution: 192dpi) and (min-width: 37.5em) { */
     background-image: ${props => {
       let gradient;
       const { linearStart, linearEnd } = props;
@@ -30,31 +31,57 @@ const Header = styled.header`
       }
 
       return `
-        linear-gradient(to top bottom, ${gradient}),
+        linear-gradient(to bottom, ${gradient}),
         url(${props.backImgBig});
     `;
     }};
-  }
+  /* } */
 
-  @media (min-width: 125em) {
+  /* @media (min-width: 125em) {
     background-image: ${props => {
       let gradient;
       gradient = 'rgba(214, 214, 214, 0.8), rgba(56, 56, 56, 0.8)';
 
       return `
-        linear-gradient(to right bottom, ${gradient}),
+        linear-gradient(to bottom, ${gradient}),
         url(${props.backImgBig});
     `;
-    }};
-  }
+    }}; */
+  /* } */
+  @media (max-width: 50em) {
+    height: 600px;
+  }};
 `;
 const LogoBox = styled.div`
   position: absolute;
-  top: 4rem;
-  left: 4rem;
+  top: 3rem;
+  left: 3rem;
 `;
 const Logo = styled.img`
-  height: 3.5rem;
+  height: 8rem;
+`;
+const TextBox = styled.div`
+  position: absolute;
+  /* parent */
+  top: 40%;
+  left: 50%;
+  /* itself */
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+`;
+const Container = styled.div`
+  position: relative;
+  height: 750px;
+  width: 100%;
+
+  @media (max-width: 50em) {
+    height: 600px;
+  }};
+`;
+const AbsoluteBox = styled.div`
+  position: absolute;
+  width: 100%;
 `;
 
 type Props = {
@@ -69,14 +96,16 @@ class NatoursHeader extends React.PureComponent<Props> {
   render(): React.Node {
     const { logo, backImg, children, ...props } = this.props;
     return (
-      <Header backImg={backImg} {...props}>
-        {logo && (
-          <LogoBox>
-            <Logo src={logo} alt="Logo" />
-          </LogoBox>
-        )}
-        {children}
-      </Header>
+      <Container>
+        <Header backImg={backImg} {...props}>
+          {logo && (
+            <LogoBox>
+              <Logo src={logo} alt="Logo" />
+            </LogoBox>
+          )}
+        </Header>
+        <AbsoluteBox>{children}</AbsoluteBox>
+      </Container>
     );
   }
 }

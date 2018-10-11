@@ -3,13 +3,13 @@ import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './themes';
 import { baseStyles } from './base';
 
-export default WarrapedComponent => {
+export default Component => {
   return class extends React.Component {
     render() {
       baseStyles();
       return (
         <ThemeProvider theme={defaultTheme}>
-          <WarrapedComponent {...this.props} />
+          <Component {...this.props} />
         </ThemeProvider>
       );
     }
