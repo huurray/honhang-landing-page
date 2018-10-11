@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Header from './components/Heading';
 import withStyles from './styles';
 
 //sections
+import Header from './components/Heading';
 import Section1 from '../src/components/Section1';
+import DownloadApp from './components/DownloadApp';
 
 const Container = styled.div``;
 
@@ -15,6 +16,7 @@ class App extends Component {
         <Header />
 
         <Section1 />
+        <DownloadApp />
       </Container>
     );
   }

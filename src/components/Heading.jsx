@@ -36,7 +36,6 @@ export default class extends React.PureComponent {
   }
 }
 
-
 const Heading = {
   Container: styled.div`
     position: absolute;

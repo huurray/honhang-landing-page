@@ -6,6 +6,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { media } from '../styles/abstracts';
 
+const facebook = require('../common/facebook-logo.svg');
+const instagram = require('../common/instagram.svg');
+
 const Header = styled.header`
   height: 75rem;
   ${props => props.theme.mixins.backgroundImageGradient};
@@ -37,21 +40,11 @@ const Header = styled.header`
     }};
   /* } */
 
-  /* @media (min-width: 125em) {
-    background-image: ${props => {
-      let gradient;
-      gradient = 'rgba(214, 214, 214, 0.8), rgba(56, 56, 56, 0.8)';
-
-      return `
-        linear-gradient(to bottom, ${gradient}),
-        url(${props.backImgBig});
-    `;
-    }}; */
-  /* } */
   @media (max-width: 50em) {
     height: 60rem;
   }};
   @media (max-width: 40em) {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
     height: 50rem;
   }};
 `;
@@ -59,6 +52,10 @@ const LogoBox = styled.div`
   position: absolute;
   top: 3rem;
   left: 3rem;
+  @media (max-width: 50em) {
+    top: 1.5rem;
+    left: 1.5rem;
+  }};
 `;
 const Logo = styled.img`
   height: 8rem;
@@ -97,6 +94,21 @@ const AbsoluteBox = styled.div`
   width: 100%;
 `;
 
+const AbsoluteIconBox = styled.div`
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+`;
+const IconImage = styled.img`
+  height: 4rem;
+  margin: 1rem;
+
+  @media (max-width: 50em) {
+    height: 2rem;
+    margin: 0.5rem;
+  }};
+`;
+
 type Props = {
   logo?: any,
   backImg?: any,
@@ -118,6 +130,14 @@ class NatoursHeader extends React.PureComponent<Props> {
           )}
         </Header>
         <AbsoluteBox>{children}</AbsoluteBox>
+        <AbsoluteIconBox>
+          <a href="https://www.facebook.com/honhang.me/">
+            <IconImage src={facebook} />
+          </a>
+          <a href="https://www.instagram.com/honhang.me/">
+            <IconImage src={instagram} />
+          </a>
+        </AbsoluteIconBox>
       </Container>
     );
   }
