@@ -12,7 +12,7 @@ export const baseStyles = () => injectGlobal`
 
   html {
     font-size: 62.5%;
-    ${media.tabLand`
+    /* ${media.tabLand`
       font-size: 56.25%;
     `}
     ${media.tabPort`
@@ -23,7 +23,7 @@ export const baseStyles = () => injectGlobal`
     `}
     /* ${media.bigDesktop`
       font-size: 75%;
-    `} */
+    `} */ */
   }
 
   body {
