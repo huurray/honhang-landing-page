@@ -51,19 +51,19 @@ class Section1 extends React.Component {
   render() {
     return (
       <Container>
-        <ImageBox>
-          <Image src={require('../common/img/search.png')} />
-        </ImageBox>
         <TextBox>
           <TitleBox>
-            <Title>Keyword Search</Title>
+            <Title>Look Profile</Title>
             <ColorDot>.</ColorDot>
           </TitleBox>
           <Content>
-            키워드를 통한 간단한 동행 검색이 가능합니다. 하나의 검색 키워드로
-            글의 제목, 내용, 날짜를 동시에 파악하여 검색됩니다!
+            동행 글 작성자의 프로필을 열람해서 사는 곳, 나이, 여행 스타일 등을
+            충분히 보고 나만의 동행자를 선택 할 수 있습니다.
           </Content>
         </TextBox>
+        <ImageBox>
+          <Image src={require('../common/img/profile.png')} />
+        </ImageBox>
       </Container>
     );
   }

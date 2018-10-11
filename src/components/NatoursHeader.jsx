@@ -60,16 +60,6 @@ const LogoBox = styled.div`
 const Logo = styled.img`
   height: 8rem;
 `;
-const TextBox = styled.div`
-  position: absolute;
-  /* parent */
-  top: 40%;
-  left: 50%;
-  /* itself */
-  transform: translate(-50%, -50%);
-
-  text-align: center;
-`;
 const Container = styled.div`
   position: relative;
   height: 750px;

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/NatoursHeader';
 
-
-
 // import Heading from './components/NatoursHeading';
 // import About from './components/NatoursAbout';
 // import Features from './components/NatoursFeatures';
@@ -17,14 +15,15 @@ import { ButtonLink } from './styles/components';
 import withStyles from './styles';
 
 //sections
-import Section1 from '../src/components/Section1';
+import Section1 from './components/Section1';
+import Section2 from './components/Section2';
+import Section3 from './components/Section3';
 
 const Container = styled.div``;
 
 const logo = require('./common/img/app-logo.png');
 const headerBackImg = require('./common/img/hero.jpg');
 const headerBackImgSmall = require('./common/img/hero-small.jpg');
-
 
 const Heading = {
   Container: styled.div`
@@ -117,10 +116,11 @@ class App extends Component {
           <Heading.Container>
             <Heading.TextButtonBox>
               <Heading.Title>
-                혼자 아닌 여행, <br/> 혼행
+                혼자 아닌 여행, <br /> 혼행
               </Heading.Title>
               <Heading.SubTitle>
-                간편한 동행 여행으로 안전한 혼행하세요.<br/>
+                간편한 동행 여행으로 안전한 혼행하세요.
+                <br />
                 함께하면 분명, 좋은 여행이 될거예요!
               </Heading.SubTitle>
               <ButtonLink href="#tours" fontColor="#0a58d6" animated>
@@ -134,7 +134,8 @@ class App extends Component {
         </Header>
 
         <Section1 />
-
+        <Section2 />
+        <Section3 />
       </Container>
     );
   }

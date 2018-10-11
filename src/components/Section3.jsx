@@ -52,16 +52,16 @@ class Section1 extends React.Component {
     return (
       <Container>
         <ImageBox>
-          <Image src={require('../common/img/search.png')} />
+          <Image src={require('../common/img/chat.png')} />
         </ImageBox>
         <TextBox>
           <TitleBox>
-            <Title>Keyword Search</Title>
+            <Title>Chat Now</Title>
             <ColorDot>.</ColorDot>
           </TitleBox>
           <Content>
-            키워드를 통한 간단한 동행 검색이 가능합니다. 하나의 검색 키워드로
-            글의 제목, 내용, 날짜를 동시에 파악하여 검색됩니다!
+            동행 글 작성자를 선택하셨다면, 채팅을 통해 말을 걸어보세요! 소중한
+            인연이 이루어질지 아닐지는 충분한 대화 후에 결정하세요.
           </Content>
         </TextBox>
       </Container>
