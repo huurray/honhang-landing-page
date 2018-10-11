@@ -1,14 +1,16 @@
 import { injectGlobal } from 'styled-components';
 import reset from 'styled-reset';
-import typography from './typography';
 import { media, colors, fonts } from '../abstracts';
 
-/**
- * ORDER: Base + typography > general layout + grid > page layout > components
- */
+
 export const baseStyles = () => injectGlobal`
   ${reset}
-  /* ${typography.toString()} */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
 
   html {
     font-size: 62.5%;
@@ -30,6 +32,7 @@ export const baseStyles = () => injectGlobal`
     line-height: normal;
     font-family: ${fonts.FONT_PRIMARY};
     color: ${colors.COLOR_GRAY_DARK_1};
+    box-sizing: border-box;
   }
 `;
 

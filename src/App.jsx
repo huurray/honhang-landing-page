@@ -26,7 +26,6 @@ const headerBackImg = require('./common/img/hero.jpg');
 const headerBackImgSmall = require('./common/img/hero-small.jpg');
 
 
-
 const Heading = {
   Container: styled.div`
     position: absolute;
