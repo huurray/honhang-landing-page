@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { media } from '../styles/abstracts';
 
 const Header = styled.header`
-  height: 750px;
+  height: 75rem;
   ${props => props.theme.mixins.backgroundImageGradient};
   background-size: cover;
   background-position: top;
@@ -49,7 +49,10 @@ const Header = styled.header`
     }}; */
   /* } */
   @media (max-width: 50em) {
-    height: 600px;
+    height: 60rem;
+  }};
+  @media (max-width: 40em) {
+    height: 50rem;
   }};
 `;
 const LogoBox = styled.div`
@@ -59,6 +62,16 @@ const LogoBox = styled.div`
 `;
 const Logo = styled.img`
   height: 8rem;
+  transition: all 0.3s;
+  @media (max-width: 60em) {
+    height: 6rem;
+  }};
+  @media (max-width: 50em) {
+    height: 5rem;
+  }};
+  @media (max-width: 40em) {
+    height: 4rem;
+  }};
 `;
 const Container = styled.div`
   position: relative;
