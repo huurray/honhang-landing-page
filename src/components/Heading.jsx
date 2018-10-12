@@ -67,7 +67,7 @@ const Heading = {
       transform: translate(-50%, -40%);
     }};
     @media (max-width: 40em) {
-      transform: translate(-50%, -20%);
+      transform: translate(-50%, -30%);
     }};
   `,
   TextButtonBox: styled.div`

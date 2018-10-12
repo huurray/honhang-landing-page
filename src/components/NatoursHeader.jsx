@@ -56,22 +56,28 @@ const Header = styled.header`
   }};
   @media (max-width: 40em) {
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-    height: 45rem;
+    height: 50rem;
   }};
 `;
 const LogoBox = styled.div`
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1.8rem;
+  left: 1.8rem;
+
+  transition: all 0.3s;
+  @media (max-width: ${MIDDLE}) {
+    top: 1.5rem;
+    left: 1.5rem;
+  }};
 `;
 const Logo = styled.img`
-  height: 8rem;
+  height: 9rem;
   transition: all 0.3s;
   @media (max-width: ${BIG}) {
-    height: 6rem;
+    height: 4.5rem;
   }};
   @media (max-width: ${MIDDLE}) {
-    height: 5rem;
+    height: 3.5rem;
   }};
   @media (max-width: ${SMALL}) {
     height: 3rem;
@@ -79,12 +85,22 @@ const Logo = styled.img`
 `;
 const Container = styled.div`
   position: relative;
-  height: 750px;
+  height: 75rem;
   width: 100%;
 
   transition: all 0.3s;
-  @media (max-width: 50em) {
-    height: 600px;
+  @media (max-width: ${BIG}) {
+    height: 70rem;
+  }};
+  @media (max-width: ${MIDDLE}) {
+    height: 65rem;
+  }};
+  @media (max-width: ${SMALL}) {
+    height: 55rem;
+  }};
+  @media (max-width: 40em) {
+    height: 50rem;
+    margin-bottom: 5rem;
   }};
 `;
 const AbsoluteBox = styled.div`
