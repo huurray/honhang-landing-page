@@ -33,10 +33,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #ccc;
   @media (max-width: 50em) {
     padding-top: 5rem;
     padding-bottom: 5rem;

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import withStyles from './styles';
 
@@ -13,15 +14,26 @@ import DownloadApp from './components/DownloadApp';
 
 const Container = styled.div``;
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.downloadApp = React.createRef();
+  }
+
+  scrollToDomRef = () => {
+    const myDomNode = ReactDOM.findDOMNode(this.downloadApp.current);
+    myDomNode.scrollIntoView({ behavior: "smooth" });
+  };
+
   render() {
     return (
       <Container>
-        <Header />
+        <Header scrollToDomRef={this.scrollToDomRef} />
         <Section1 />
         <Section2 />
         <Section3 />
-        <DownloadApp />
+        <DownloadApp ref={this.downloadApp} />
         <Footer />
       </Container>
     );

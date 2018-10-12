@@ -3,21 +3,31 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   background-color: #333;
+  @media (max-width: 60em) {
+    height: 40rem;
+  }};
 `;
 const FooterBox = styled.div`
-  width: 114rem;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   padding-top: 8rem;
+  @media (max-width: 60em) {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5rem;
+  }};
 `;
 const Row = styled.div`
-  width: 25%;
-  float: left;
-`;
-const LogoImg = styled.img`
-  width: 15rem;
-  height: auto;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 60em) {
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }};
 `;
 const FooterList = styled.ul`
   list-style: none;
@@ -35,7 +45,7 @@ const FooterTitle = styled.span`
   line-height: 1.7;
   color: white;
 `;
-const FooterLink = styled.div`
+const FooterLink = styled.a`
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 1.7;
@@ -46,7 +56,7 @@ const FooterLink = styled.div`
   cursor: pointer;
   &:hover,
   &:active {
-    color: #ff6699;
+    color: #3648fb;
     font-weight: 700;
     transform: rotate(2deg) scale(1.05);
   }
@@ -56,24 +66,18 @@ const Footer = () => {
     <Section>
       <FooterBox>
         <Row>
-          <LogoImg src={require('../common/img/app-logo.png')} alt="logo" />
-        </Row>
-        <Row>
           <FooterList>
             <FooterListItem>
               <FooterTitle>미드나잇플랜 대표 :</FooterTitle> 허준혁
-            </FooterListItem>
-            <FooterListItem>
-              <FooterTitle>사업자등록번호 :</FooterTitle> 000-00-00000
             </FooterListItem>
             <FooterListItem>
               <FooterTitle>주소 :</FooterTitle> 인천광역시 연수구 선학로
               101
             </FooterListItem>
             <FooterListItem>
-              2018 &copy;Copyright Honhang.
+              2018 &copy;Copyright MidnightPlan.
               <br />
-              ALL right reserved
+              ALL right reserved.
             </FooterListItem>
           </FooterList>
         </Row>
@@ -82,27 +86,17 @@ const Footer = () => {
             <FooterTitle>CONTACT US</FooterTitle>
             <FooterListItem>010-6495-8078</FooterListItem>
             <FooterListItem>AM 10:00 ~ PM 6:00</FooterListItem>
-            <FooterListItem>제휴문의 gjwnsgur91@naver.com</FooterListItem>
-            <FooterTitle>BANK INFO</FooterTitle>
-            <FooterListItem>
-              국민 660402-01-513947 예금주 허준혁
-            </FooterListItem>
+            <FooterListItem>제휴문의 huurray@gmail.com</FooterListItem>
           </FooterList>
         </Row>
         <Row>
           <FooterList>
             <FooterTitle>INFOMATION</FooterTitle>
             <FooterListItem>
-              <FooterLink>회사소개</FooterLink>
+              <FooterLink href="https://loycord.com/privacy">서비스 이용약관</FooterLink>
             </FooterListItem>
             <FooterListItem>
-              <FooterLink>QnA</FooterLink>
-            </FooterListItem>
-            <FooterListItem>
-              <FooterLink>서비스 이용약관</FooterLink>
-            </FooterListItem>
-            <FooterListItem>
-              <FooterLink>개인정보 취급정책</FooterLink>
+              <FooterLink href="https://loycord.com/privacy">개인정보 취급정책</FooterLink>
             </FooterListItem>
           </FooterList>
         </Row>

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  height: 70rem;
+  height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-bottom: 10rem;
   @media (max-width: 60em) {
     flex-direction: column;
   }};
@@ -22,10 +22,10 @@ const Image = styled.img`
   width: 47rem;
   height: 55rem;
   @media (max-width: 60em) {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }};
   @media (max-width: 30em) {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }};
 `;
 const TextBox = styled.div`
@@ -44,8 +44,8 @@ const TitleBox = styled.div`
   display: flex;
 `;
 const Title = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 900;
   line-height: 1.7;
   color: #222;
   @media (max-width: 40em) {
@@ -53,8 +53,8 @@ const Title = styled.h1`
   }};
 `;
 const ColorDot = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 900;
   line-height: 1.7;
   color: #3648fb;
   @media (max-width: 40em) {
@@ -62,12 +62,13 @@ const ColorDot = styled.h1`
   }};
 `;
 const Content = styled.p`
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.7;
-  color: #222;
+  color: #999;
+  margin-top: 2rem;
   @media (max-width: 40em) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }};
 `;
 
@@ -84,8 +85,10 @@ class Section3 extends React.Component {
             <ColorDot>.</ColorDot>
           </TitleBox>
           <Content>
-            동행 글 작성자를 선택하셨다면, 채팅을 통해 말을 걸어보세요! 소중한
-            인연이 이루어질지 아닐지는 충분한 대화 후에 결정하세요.
+            동행 글 작성자를 선택하셨다면, 채팅을 통해 말을 걸어보세요! 채팅은
+            동행자와 여행에 대해 이야기할 수 있는 기회가 되고, 나에게 맞는
+            동행자인지 알려줄거에요! 소중한 인연이 이루어질지 아닐지는 충분한
+            대화 후에 결정하세요.
           </Content>
         </TextBox>
       </Container>

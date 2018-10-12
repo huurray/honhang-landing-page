@@ -8,11 +8,7 @@ const logo = require('../common/img/app-logo.png');
 export default class extends React.PureComponent {
   render() {
     return (
-      <Header
-        logo={logo}
-        linearStart="#3648FB"
-        linearEnd="#26EFFB"
-      >
+      <Header logo={logo} linearStart="#3648FB" linearEnd="#26EFFB">
         <Heading.Container>
           <Heading.TextButtonBox>
             <Heading.Title>
@@ -23,7 +19,11 @@ export default class extends React.PureComponent {
               <br />
               함께하면 분명, 좋은 여행이 될거예요!
             </Heading.SubTitle>
-            <ButtonLink href="#tours" fontColor="#0a58d6" animated>
+            <ButtonLink
+              onClick={this.props.scrollToDomRef}
+              fontColor="#0a58d6"
+              animated
+            >
               지금 다운로드
             </ButtonLink>
           </Heading.TextButtonBox>

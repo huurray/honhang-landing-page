@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  height: 70rem;
+  height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +26,10 @@ const Image = styled.img`
   width: 47rem;
   height: 55rem;
   @media (max-width: 60em) {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }};
   @media (max-width: 30em) {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }};
 `;
 const TextBox = styled.div`
@@ -50,8 +50,8 @@ const TitleBox = styled.div`
   display: flex;
 `;
 const Title = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 900;
   line-height: 1.7;
   color: #222;
   @media (max-width: 40em) {
@@ -59,8 +59,8 @@ const Title = styled.h1`
   }};
 `;
 const ColorDot = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 900;
   line-height: 1.7;
   color: #3648fb;
   @media (max-width: 40em) {
@@ -68,12 +68,13 @@ const ColorDot = styled.h1`
   }};
 `;
 const Content = styled.p`
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.7;
-  color: #222;
+  color: #999;
+  margin-top: 2rem;
   @media (max-width: 40em) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }};
 `;
 class Section2 extends React.Component {
@@ -86,8 +87,9 @@ class Section2 extends React.Component {
             <ColorDot>.</ColorDot>
           </TitleBox>
           <Content>
-            동행 글 작성자의 프로필을 열람해서 사는 곳, 나이, 여행 스타일 등을
-            충분히 보고 나만의 동행자를 선택 할 수 있습니다.
+            동행 글 작성자의 프로필을 열람해서 나만의 동행자를 선택 할 수
+            있습니다. 동행자의 프로필에서 사는 곳, 나이, 여행 스타일 등을 은
+            나와 맞는 여행자인지 판단하는 좋은 도구가 될 것입니다!
           </Content>
         </TextBox>
         <ImageBox>
