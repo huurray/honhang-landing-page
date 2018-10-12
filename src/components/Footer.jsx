@@ -68,7 +68,7 @@ const Footer = () => {
         <Row>
           <FooterList>
             <FooterListItem>
-              <FooterTitle>미드나잇플랜 대표 :</FooterTitle> 허준혁
+              <FooterTitle>대표 :</FooterTitle> 허준혁
             </FooterListItem>
             <FooterListItem>
               <FooterTitle>주소 :</FooterTitle> 인천광역시 연수구 선학로
