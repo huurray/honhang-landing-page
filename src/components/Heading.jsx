@@ -39,8 +39,7 @@ export default class extends React.PureComponent {
 const BIGGEST = '90em';
 const BIG = '65em';
 const MIDDLE = '55em';
-const IMAGE_NONE = '50em';
-const SMALL = '45em';
+const SMALL = '49em';
 
 const Heading = {
   Container: styled.div`
@@ -56,19 +55,19 @@ const Heading = {
     flex-direction: row;
     justify-content: space-between;
     /* background-color: orangered; */
+    transition: all 0.3s;
     @media (min-width: 100em) {
       width: 50%;
     }};
     @media (min-width: ${BIGGEST}) {
       width: 60%;
     }};
-    @media (max-width: ${IMAGE_NONE}) {
-      flex-direction: column;
+    @media (max-width: ${SMALL}) {
       bottom: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -40%);
     }};
-    @media (max-width: 45rem) {
-      transform: translate(-50%, -30%);
+    @media (max-width: 40em) {
+      transform: translate(-50%, -20%);
     }};
   `,
   TextButtonBox: styled.div`
@@ -77,7 +76,8 @@ const Heading = {
     flex-direction: column;
     align-items: flex-start;
 
-    @media (max-width: ${IMAGE_NONE}) {
+    transition: all 0.3s;
+    @media (max-width: ${SMALL}) {
       align-items: center;
     }};
   `,
@@ -86,6 +86,8 @@ const Heading = {
     font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
+
+    transition: all 0.3s;
     @media (max-width: ${BIG}) {
       font-size: 4.5rem;
     }};
@@ -102,6 +104,8 @@ const Heading = {
     color: #fff;
     margin-bottom: 8rem;
     line-height: 3.5rem;
+
+    transition: all 0.3s;
     @media (max-width: ${BIG}) {
       font-size: 1.7rem;
     }};
@@ -118,13 +122,15 @@ const Heading = {
     justify-content: center;
     align-items: flex-end;
     /* background-color: pink; */
-    @media (max-width: ${IMAGE_NONE}) {
+    transition: all 0.3s;
+    @media (max-width: ${SMALL}) {
       display: none;
     }};
   `,
   Image: styled.img`
     height: 50rem;
     object-fit: contain;
+    transition: all 0.3s;
     @media (max-width: ${BIG}) {
       height: 45rem;
     }};

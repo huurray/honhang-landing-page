@@ -9,6 +9,11 @@ import { media } from '../styles/abstracts';
 const facebook = require('../common/facebook-logo.svg');
 const instagram = require('../common/instagram.svg');
 
+const BIGGEST = '90em';
+const BIG = '65em';
+const MIDDLE = '55em';
+const SMALL = '50em';
+
 const Header = styled.header`
   height: 75rem;
   ${props => props.theme.mixins.backgroundImageGradient};
@@ -39,35 +44,37 @@ const Header = styled.header`
     `;
     }};
   /* } */
-
-  @media (max-width: 50em) {
-    height: 60rem;
+  transition: all 0.3s;
+  @media (max-width: ${BIG}) {
+    height: 70rem;
+  }};
+  @media (max-width: ${MIDDLE}) {
+    height: 65rem;
+  }};
+  @media (max-width: ${SMALL}) {
+    height: 55rem;
   }};
   @media (max-width: 40em) {
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-    height: 50rem;
+    height: 45rem;
   }};
 `;
 const LogoBox = styled.div`
   position: absolute;
-  top: 3rem;
-  left: 3rem;
-  @media (max-width: 50em) {
-    top: 1.5rem;
-    left: 1.5rem;
-  }};
+  top: 1.5rem;
+  left: 1.5rem;
 `;
 const Logo = styled.img`
   height: 8rem;
   transition: all 0.3s;
-  @media (max-width: 60em) {
+  @media (max-width: ${BIG}) {
     height: 6rem;
   }};
-  @media (max-width: 50em) {
+  @media (max-width: ${MIDDLE}) {
     height: 5rem;
   }};
-  @media (max-width: 40em) {
-    height: 4rem;
+  @media (max-width: ${SMALL}) {
+    height: 3rem;
   }};
 `;
 const Container = styled.div`
@@ -75,6 +82,7 @@ const Container = styled.div`
   height: 750px;
   width: 100%;
 
+  transition: all 0.3s;
   @media (max-width: 50em) {
     height: 600px;
   }};
@@ -93,7 +101,12 @@ const IconImage = styled.img`
   height: 4rem;
   margin: 1rem;
 
-  @media (max-width: 50em) {
+  transition: all 0.3s;
+ @media (max-width: ${BIG}) {
+    height: 3rem;
+    margin: 0.8rem;
+  }};
+  @media (max-width: ${MIDDLE}) {
     height: 2rem;
     margin: 0.5rem;
   }};

@@ -12,6 +12,8 @@ const ContentBox = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10rem 10rem 0 10rem;
+
+  transition: all 0.3s;
   @media (max-width: 70em) {
     flex-direction: column;
   }};
@@ -26,6 +28,8 @@ const ImageBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all 0.3s;
   @media (max-width: 70em) {
     padding-top: 5rem;
     order: 2
@@ -36,6 +40,8 @@ const ImageBox = styled.div`
 `;
 const Image = styled.img`
   height: 55rem;
+
+  transition: all 0.3s;
   @media (max-width: 40em) {
     height: 45rem;
   }};
@@ -49,6 +55,8 @@ const TextBox = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-left: 5rem;
+
+  transition: all 0.3s;
   @media (max-width: 70em) {
     padding-left: 0;
     order: 1
@@ -68,6 +76,8 @@ const Title = styled.div`
   font-weight: 900;
   color: #222;
   padding-bottom: 1rem;
+
+  transition: all 0.3s;
   @media (max-width: 60em) {
     font-size: 4rem;
   }};

@@ -38,6 +38,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 1px solid #ccc;
+
+  transition: all 0.3s;
   @media (max-width: 50em) {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -49,6 +51,8 @@ const LogoImage = styled.img`
   border-radius: 15px;
   box-shadow: 0px 4px 20px #d6e5ff;
   margin-bottom: 5rem;
+
+  transition: all 0.3s;
   @media (max-width: 50em) {
     height: 6rem;
     margin-bottom: 2rem;
@@ -59,6 +63,8 @@ const Heading = styled.h1`
   font-weight: 900;
   color: #333;
   margin-bottom: 2rem;
+
+  transition: all 0.3s;
   @media (max-width: 50em) {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -72,6 +78,8 @@ const SubHeading = styled.h3`
   font-weight: 500;
   color: #888;
   margin-bottom: 3rem;
+
+  transition: all 0.3s;
   @media (max-width: 50em) {
     font-size: 1.4rem;
     width: 30rem;
