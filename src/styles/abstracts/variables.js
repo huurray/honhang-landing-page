@@ -43,7 +43,7 @@ export const GUTTER_HORIZONTAL = '6rem';
 
 export const fonts = {
   DEFAULT_FONT_SIZE,
-  FONT_PRIMARY: '\'Roboto\', sans-serif',
+  FONT_PRIMARY: '\'Noto Sans KR\', sans-serif',
   FONT_DISPLAY: '\'Josefin Sans\', sans-serif'
 };
 
