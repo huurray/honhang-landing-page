@@ -8,7 +8,7 @@ const logo = require('../common/img/app-logo.png');
 export default class extends React.PureComponent {
   render() {
     return (
-      <Header logo={logo} linearStart="#3648FB" linearEnd="#0a58d6">
+      <Header logo={logo} linearStart="#0a58d6" linearEnd="#5193ff">
         <Heading.Container>
           <Heading.TextButtonBox>
             <Heading.Title>
@@ -36,6 +36,12 @@ export default class extends React.PureComponent {
   }
 }
 
+const BIGGEST = '90em';
+const BIG = '65em';
+const MIDDLE = '55em';
+const IMAGE_NONE = '50em';
+const SMALL = '45em';
+
 const Heading = {
   Container: styled.div`
     position: absolute;
@@ -50,13 +56,19 @@ const Heading = {
     flex-direction: row;
     justify-content: space-between;
     /* background-color: orangered; */
-    @media (min-width: 90em) {
+    @media (min-width: 100em) {
       width: 50%;
     }};
-    @media (max-width: 50em) {
+    @media (min-width: ${BIGGEST}) {
+      width: 60%;
+    }};
+    @media (max-width: ${IMAGE_NONE}) {
       flex-direction: column;
       bottom: 50%;
       transform: translate(-50%, -50%);
+    }};
+    @media (max-width: 45rem) {
+      transform: translate(-50%, -30%);
     }};
   `,
   TextButtonBox: styled.div`
@@ -65,7 +77,7 @@ const Heading = {
     flex-direction: column;
     align-items: flex-start;
 
-    @media (max-width: 50em) {
+    @media (max-width: ${IMAGE_NONE}) {
       align-items: center;
     }};
   `,
@@ -74,13 +86,13 @@ const Heading = {
     font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
-    @media (max-width: 60em) {
+    @media (max-width: ${BIG}) {
       font-size: 4.5rem;
     }};
-    @media (max-width: 50em) {
+    @media (max-width: ${MIDDLE}) {
       font-size: 4rem;
     }};
-    @media (max-width: 40em) {
+    @media (max-width: ${SMALL}) {
       font-size: 3.5rem;
     }};
   `,
@@ -89,14 +101,14 @@ const Heading = {
     font-weight: 500;
     color: #fff;
     margin-bottom: 8rem;
-    line-height: 2.4rem;
-    @media (max-width: 60em) {
+    line-height: 3.5rem;
+    @media (max-width: ${BIG}) {
       font-size: 1.7rem;
     }};
-    @media (max-width: 50em) {
+    @media (max-width: ${MIDDLE}) {
       font-size: 1.6rem;
     }};
-    @media (max-width: 40em) {
+    @media (max-width: ${SMALL}) {
       font-size: 1.4rem;
     }};
   `,
@@ -106,12 +118,15 @@ const Heading = {
     justify-content: center;
     align-items: flex-end;
     /* background-color: pink; */
-    @media (max-width: 50em) {
+    @media (max-width: ${IMAGE_NONE}) {
       display: none;
     }};
   `,
   Image: styled.img`
-    height: 500px;
+    height: 50rem;
     object-fit: contain;
+    @media (max-width: ${BIG}) {
+      height: 45rem;
+    }};
   `
 };
