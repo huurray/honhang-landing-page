@@ -65,6 +65,7 @@ const Title = styled.div`
   font-size: 5rem;
   font-weight: 900;
   color: #222;
+  padding-bottom: 1rem;
   @media (max-width: 60em) {
     font-size: 4rem;
   }};
@@ -75,7 +76,6 @@ const Title = styled.div`
 const ColorDot = styled.span`
   font-size: 5rem;
   font-weight: 900;
-  line-height: 1.4;
   color: #3648fb;
   @media (max-width: 40em) {
     font-size: 3rem;
@@ -84,7 +84,7 @@ const ColorDot = styled.span`
 const Content = styled.p`
   font-size: 1.7rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 3rem;
   color: #999;
   @media (max-width: 40em) {
     font-size: 1.4rem;

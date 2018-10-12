@@ -1,6 +1,6 @@
 import { injectGlobal } from 'styled-components';
 import reset from 'styled-reset';
-import { media, colors, fonts } from '../abstracts';
+import { colors, fonts } from '../abstracts';
 
 
 export const baseStyles = () => injectGlobal`
@@ -14,18 +14,6 @@ export const baseStyles = () => injectGlobal`
 
   html {
     font-size: 62.5%;
-    /* ${media.tabLand`
-      font-size: 56.25%;
-    `}
-    ${media.tabPort`
-      font-size: 50%;
-    `}
-    ${media.phone`
-      font-size: 40%;
-    `}
-    /* ${media.bigDesktop`
-      font-size: 75%;
-    `} */ */
   }
 
   body {

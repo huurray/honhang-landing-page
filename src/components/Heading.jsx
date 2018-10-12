@@ -8,7 +8,7 @@ const logo = require('../common/img/app-logo.png');
 export default class extends React.PureComponent {
   render() {
     return (
-      <Header logo={logo} linearStart="#3648FB" linearEnd="#26EFFB">
+      <Header logo={logo} linearStart="#3648FB" linearEnd="#0a58d6">
         <Heading.Container>
           <Heading.TextButtonBox>
             <Heading.Title>
