@@ -23,7 +23,7 @@ class App extends React.Component {
 
   scrollToDomRef = () => {
     const myDomNode = ReactDOM.findDOMNode(this.downloadApp.current);
-    myDomNode.scrollIntoView({ behavior: "smooth" });
+    myDomNode.scrollIntoView({ behavior: 'smooth' });
   };
 
   render() {

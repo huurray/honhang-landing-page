@@ -9,7 +9,6 @@ import { media } from '../styles/abstracts';
 const facebook = require('../common/facebook-logo.svg');
 const instagram = require('../common/instagram.svg');
 
-const BIGGEST = '90em';
 const BIG = '65em';
 const MIDDLE = '55em';
 const SMALL = '50em';
